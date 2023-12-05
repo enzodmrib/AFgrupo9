@@ -1,7 +1,6 @@
 import express from 'express'
 import cors from "cors"
 import router from './routes'
-import swaggerUi from 'swagger-ui-express'
 import swaggerConfig from './swagger.json'
 import { initDB } from './database/init'
 
@@ -15,9 +14,6 @@ app.use(cors())
 initDB()
 
 app.use("/tourismapp", router)
-
-
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerConfig));
 
 
 app.listen(PORT, () => {
