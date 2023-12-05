@@ -16,4 +16,4 @@ Após isso, abra mais 3 terminais, eles serão responsáveis por rodar os servi�
 
 Em sequencia, execute o comando "npm run dev" no terminal inicial
 
-Por fim, para executar o frontend, abra mais um terminal e navegue até o diretório /web e execute "npm run dev", e no seu navegador, navvegue até a rota "http://localhost:3000"
+Por fim, para executar o frontend, abra mais um terminal e navegue até o diretório /web e execute "npm install" e em sequencia, "npm run dev", e no seu navegador, navvegue até a rota "http://localhost:3000"
