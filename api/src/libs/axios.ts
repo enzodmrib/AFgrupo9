@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const flightsApi = axios.create({
-    baseURL: 'http://localhost:3001',
+    baseURL: 'http://localhost:3001/flightapp',
 })
 
 export const hotelsApi = axios.create({

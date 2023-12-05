@@ -16,6 +16,6 @@ export async function checkUserAuth(req, res, next) {
       }
     }
   } catch (e) {
-    res.status(500).json({ message: String(e) })
+    return res.status(500).json({ message: String(e) })
   }
 }

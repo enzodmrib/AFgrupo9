@@ -2,6 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "install:all": "npm run install:flights && npm run install:hotels && npm run install:events",
@@ -11,6 +12,7 @@
     "start:flights": "npm --prefix services/flights run dev",
     "start:hotels": "npm --prefix services/hotels run dev",
     "start:events": "mvn -f services/events/pom.xml spring-boot:run",
+    "dev": "tsx watch src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
