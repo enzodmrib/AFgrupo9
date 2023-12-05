@@ -1,26 +1,15 @@
-import { flightsApi } from "../libs/axios"
+import { eventsApi, flightsApi } from "../libs/axios"
 
 export async function login(req, res) {
-  try {
-    const { email, password } = req.body
+  const response = await flightsApi.post('/login', req.body).catch(e => e.response)
 
-    const user: any = await flightsApi.post('/login', {
-      email,
-      password
-    })
+  return res.status(response.status).json(response.data)
+}
 
-    if (user) {
-      const { id, username, email } = user.data.user
+export async function signUp(req, res) {
+  const response = await flightsApi.post('/user', req.body).catch(e => e.response)
 
-      return res.status(200).json({
-        user: {
-          id,
-          username,
-          email
-        }
-      })
-    }
-  } catch (e) {
-    return res.status(500).json({ message: String(e) })
+  if(response.status === 201) {
+    return res.status(201).json(response.data)
   }
 }

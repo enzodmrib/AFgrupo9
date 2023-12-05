@@ -300,3 +300,9 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/enzor/D
 	at org.h2.mvstore.FileStore.open(FileStore.java:128)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
 	... 133 more
+2023-12-05 15:58:41 jdbc[333]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-12-05 16:01:24 jdbc[333]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-12-05 16:03:40 jdbc[333]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]

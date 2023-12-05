@@ -2,6 +2,8 @@ import { SqliteUsersRepository } from "../repositories/sqlite/sqlite-users-repos
 import { FindUserUseCase } from "../use-cases/find-user-use-case"
 
 export async function checkUserAuth(req, res, next) {
+  console.log(req.headers)
+
   try {
     if (!req.headers['user-id']) {
       throw new Error('Usuário não está autenticado')
